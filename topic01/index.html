@@ -66,8 +66,8 @@ figcaption
 
     
 <div class="two wide column sitemap">
-  <div class="popup" data-content="Top Level Topic View">
-    <a href="../index.html"> <i class="huge home icon"></i> Topics </a>
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="../index.html"> <i class="huge home icon"></i> Module </a>
   </div>
 </div>
 
@@ -105,29 +105,29 @@ figcaption
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     <div class="header">
       <a class="item" href="#">
-        Eclipse and Basic I/O
+        Eclipse and Basic I/O
       </a>
     </div>
     <div class="menu">
       
         <a class="item" href="talk-1/a-prog-fund-2-intro-to-module.pdf">
-          Introduction to Module
+          Introduction to Module
         </a>
       
         <a class="item" href="talk-2/b-prog-fund-2-main-and-JVM.pdf">
-          JVM
+          JVM
         </a>
       
         <a class="item" href="talk-3/c-prog-fund-2-eclipse.pdf">
-          Introduction to Eclipse
+          Introduction to Eclipse
         </a>
       
         <a class="item" href="talk-4/d-prog-fund-2-OO-Recap.pdf">
-          OO Recap
+          OO Recap
         </a>
       
         <a class="item" href="talk-5/e-prog-fund-2-scanner-io.pdf">
-          Scanner IO
+          Scanner IO
         </a>
       
         <a class="item" href="book/index.html">
@@ -156,6 +156,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -174,6 +175,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -192,6 +194,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -210,6 +213,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -228,6 +232,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -246,6 +251,7 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
         
@@ -260,24 +266,22 @@ figcaption
 
     </footer>
     <script>
-      
-$(document).ready(function()
-{
-  $("img").addClass ("ui image");
+      $(document).ready(function () {
+  $('img').addClass('ui image');
   $('.ui.embed').embed();
 
-  var images = $(".lab img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0)
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
     }
   });
 
+  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({
