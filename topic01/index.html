@@ -60,14 +60,14 @@ figcaption
 </a>
 
     <div class="seven wide center aligned column">
-      <h2> Eclipse and Basic I/O </h2>
+      <h2> Eclipse and Basic I/O </h2>
       <p> Single Topic </p>
     </div>
 
     
 <div class="two wide column sitemap">
-  <div class="popup" data-content="To the top level Topics for this Module...">
-    <a href="../index.html"> <i class="huge home icon"></i> Module </a>
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="../index.html"> <i class="huge home icon"></i> Topics </a>
   </div>
 </div>
 
@@ -145,7 +145,7 @@ figcaption
   <a class="ui raised link card" href="talk-1/a-prog-fund-2-intro-to-module.pdf">
     <div class="content">
         <div class="right floated meta"> <i class="film large icon"></i></div>
-        <div class="header"> Introduction to Module </div>
+        <div class="header"> Introduction to Module </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="talk-1/a-prog-fund-2-intro-to-module.jpg">
@@ -156,7 +156,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -164,7 +163,7 @@ figcaption
   <a class="ui raised link card" href="talk-2/b-prog-fund-2-main-and-JVM.pdf">
     <div class="content">
         <div class="right floated meta"> <i class="film large icon"></i></div>
-        <div class="header"> JVM </div>
+        <div class="header"> JVM </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="talk-2/b-prog-fund-2-main-and-JVM.jpg">
@@ -175,7 +174,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -183,7 +181,7 @@ figcaption
   <a class="ui raised link card" href="talk-3/c-prog-fund-2-eclipse.pdf">
     <div class="content">
         <div class="right floated meta"> <i class="film large icon"></i></div>
-        <div class="header"> Introduction to Eclipse </div>
+        <div class="header"> Introduction to Eclipse </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="talk-3/c-prog-fund-2-eclipse.png">
@@ -194,7 +192,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -202,7 +199,7 @@ figcaption
   <a class="ui raised link card" href="talk-4/d-prog-fund-2-OO-Recap.pdf">
     <div class="content">
         <div class="right floated meta"> <i class="film large icon"></i></div>
-        <div class="header"> OO Recap </div>
+        <div class="header"> OO Recap </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="talk-4/d-prog-fund-2-OO-Recap.jpg">
@@ -213,7 +210,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -221,7 +217,7 @@ figcaption
   <a class="ui raised link card" href="talk-5/e-prog-fund-2-scanner-io.pdf">
     <div class="content">
         <div class="right floated meta"> <i class="film large icon"></i></div>
-        <div class="header"> Scanner IO </div>
+        <div class="header"> Scanner IO </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="talk-5/e-prog-fund-2-scanner-io.jpg">
@@ -232,7 +228,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -251,7 +246,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -266,22 +260,24 @@ figcaption
 
     </footer>
     <script>
-      $(document).ready(function () {
-  $('img').addClass('ui image');
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
   $('.ui.embed').embed();
 
-  const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
-      $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
-      divLabel.append($images[i].alt);
-      $(divLabel).insertBefore($images[i]);
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
     }
   });
 
-  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

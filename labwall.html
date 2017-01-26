@@ -61,14 +61,14 @@ figcaption
 </a>
 
   <div class="seven wide center aligned column">
-    <h2 class="headder">  Programming Fundamentals 2</h2>
+    <h2 class="headder">  Programming Fundamentals 2</h2>
     <p> All Labs in the Course </p>
   </div>
 
   
 <div class="two wide column sitemap">
-  <div class="popup" data-content="To the top level Topics for this Module...">
-    <a href="index.html"> <i class="huge home icon"></i> Module </a>
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
   </div>
 </div>
 
@@ -118,6 +118,10 @@ figcaption
       Lab-02b
     </a>
     
+    <a class="item" href="topic03/book/index.html">
+      Lab-03
+    </a>
+    
   </div>
   <div class="pusher">
     <div class="ui basic segment">
@@ -138,7 +142,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -157,7 +160,6 @@ figcaption
 
       </div>
     </div>
-    
   </a>
 
         
@@ -176,7 +178,24 @@ figcaption
 
       </div>
     </div>
-    
+  </a>
+
+        
+        
+  <a class="ui raised link card" href="topic03/book/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-03 </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="topic03/book/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>On completion of this lab you should:- be more familiar with the Eclipse IDE.- understand and be able to use an ArrayList data structure.- be able add a menu driven approach to the Shop console app.</p>
+
+      </div>
+    </div>
   </a>
 
         
@@ -190,22 +209,24 @@ figcaption
 
     </footer>
     <script>
-      $(document).ready(function () {
-  $('img').addClass('ui image');
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
   $('.ui.embed').embed();
 
-  const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
-      $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
-      divLabel.append($images[i].alt);
-      $(divLabel).insertBefore($images[i]);
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
     }
   });
 
-  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({

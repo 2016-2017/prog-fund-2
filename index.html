@@ -51,7 +51,6 @@ figcaption
 
 
 
-
 <header class="ui middle aligned center aligned stackable grid segment">
 
   <a class="ui blue left corner label">
@@ -61,12 +60,16 @@ figcaption
 </a>
 
   <div class="seven wide center aligned column">
-    <h2 class="headder">  Programming Fundamentals 2</h2>
+    <h2 class="headder">  Programming Fundamentals 2</h2>
     <p> Top Level Topics </p>
   </div>
 
-
   
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
 
   
 <div class="four wide column">
@@ -112,27 +115,27 @@ figcaption
       
       <div class="menu">
         <a class="item" href="topic01/talk-1/a-prog-fund-2-intro-to-module.pdf">
-          Introduction to Module</a>
+          Introduction to Module</a>
       </div>
       
       <div class="menu">
         <a class="item" href="topic01/talk-2/b-prog-fund-2-main-and-JVM.pdf">
-          JVM</a>
+          JVM</a>
       </div>
       
       <div class="menu">
         <a class="item" href="topic01/talk-3/c-prog-fund-2-eclipse.pdf">
-          Introduction to Eclipse</a>
+          Introduction to Eclipse</a>
       </div>
       
       <div class="menu">
         <a class="item" href="topic01/talk-4/d-prog-fund-2-OO-Recap.pdf">
-          OO Recap</a>
+          OO Recap</a>
       </div>
       
       <div class="menu">
         <a class="item" href="topic01/talk-5/e-prog-fund-2-scanner-io.pdf">
-          Scanner IO</a>
+          Scanner IO</a>
       </div>
       
       <div class="menu">
@@ -151,12 +154,12 @@ figcaption
       
       <div class="menu">
         <a class="item" href="topic02/talk-1/a-prog-fund-2-array-recap.pdf">
-          Array Recap</a>
+          Array Recap</a>
       </div>
       
       <div class="menu">
         <a class="item" href="topic02/talk-2/b-prog-fund-2-intro-to-arraylists.pdf">
-          Introduction to ArrayList</a>
+          Introduction to ArrayList</a>
       </div>
       
       <div class="menu">
@@ -171,6 +174,30 @@ figcaption
       
     </div>
     
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+        ArrayList and Menu Driven Apps
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-1/a-prog-fund-2-intro-to-arraylists (contd).pdf">
+          Continuing with ArrayList</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-2/b-prog-fund-2-menu-driven-systems.pdf">
+          Menu Driven Systems</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
   </div>
   <div class="pusher">
     <div class="ui basic segment">
@@ -180,7 +207,7 @@ figcaption
   <a class="ui raised link card" href="./topic01/index.html">
     <div class="content">
         <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-        <div class="header"> Eclipse and Basic I/O </div>
+        <div class="header"> Eclipse and Basic I/O </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="./topic01/talk-1/a-prog-fund-2-intro-to-module.jpg">
@@ -190,7 +217,6 @@ figcaption
          
       </div>
     </div>
-    
   </a>
 
         
@@ -198,7 +224,7 @@ figcaption
   <a class="ui raised link card" href="./topic02/index.html">
     <div class="content">
         <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-        <div class="header"> Grouping Objects </div>
+        <div class="header"> Grouping Objects </div>
     </div>
     <div class="image">
       <img class="ui bordered rounded image" src="./topic02/talk-1/a-prog-fund-2-array-recap.jpg">
@@ -208,7 +234,23 @@ figcaption
          
       </div>
     </div>
-    
+  </a>
+
+        
+          
+  <a class="ui raised link card" href="./topic03/index.html">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> ArrayList and Menu Driven Apps </div>
+    </div>
+    <div class="image">
+      <img class="ui bordered rounded image" src="./topic03/talk-1/a-prog-fund-2-intro-to-arraylists (contd).jpg">
+    </div>
+    <div class="content">
+      <div class="description">
+         
+      </div>
+    </div>
   </a>
 
         
@@ -222,22 +264,24 @@ figcaption
 
     </footer>
     <script>
-      $(document).ready(function () {
-  $('img').addClass('ui image');
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
   $('.ui.embed').embed();
 
-  const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
-      $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
-      divLabel.append($images[i].alt);
-      $(divLabel).insertBefore($images[i]);
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
     }
   });
 
-  $('.ui.embed').embed();
 
   $('.ui.menu .item')
       .tab({
