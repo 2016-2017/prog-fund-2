@@ -89,25 +89,17 @@ h3
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-      More on Collections (and Assignment 1)
+      Abstraction, Debugging (and Assignment 2)
     </a>
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Lab-06">
-      Lab-06
+    <a class="item" data-tab="Lab-08">
+      Lab-08
     </a>
     
     <a class="item" data-tab="01">
       01
-    </a>
-    
-    <a class="item" data-tab="02">
-      02
-    </a>
-    
-    <a class="item" data-tab="03">
-      03
     </a>
     
     <a class="item" href="../../index.html">
@@ -156,7 +148,7 @@ h3
       
     
       
-        <a class="active item" href="../../topic06/book/index.html">
+        <a class="item" href="../../topic06/book/index.html">
           Lab-06
         </a>
       
@@ -168,7 +160,7 @@ h3
       
     
       
-        <a class="item" href="../../topic08/book/index.html">
+        <a class="active item" href="../../topic08/book/index.html">
           Lab-08
         </a>
       
@@ -178,104 +170,59 @@ h3
     <div class="ui basic segment">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-06">
+      <div  class="ui tab segment lab" data-tab="Lab-08">
         <h1>Objectives</h1>
-<p>On completion of this lab you should be able to:</p>
+<p>The objectives of this lab are to:</p>
 <ul>
-<li>build a small, console-based application using ArrayList, HashMap and HashSet.</li>
-<li>integrate code to tokenize Strings into the above app.</li>
-<li>use the Random class to return random objects from a collection.</li>
+<li>Understand the ideas behind abstraction</li>
+<li>Sucessfully implement abstraction in the Network system.</li>
 </ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="01">
-        <h1>Developing Tech Support 2 application</h1>
-<p>In this section, you will:</p>
+        <h1>Network-V5</h1>
+<p>In this step, you will create version 5 of the Network system (our menu driven messaging system).  In this version, you will use abstraction in the inheritance hierarchy.</p>
+<h2>Abstraction in Network-V5</h2>
 <ul>
-<li>download the solution to Tech Support 1 that we covered in lectures. </li>
-<li>familiarise yourself with the functionality and classes in the solution.</li>
-<li>refactor the code so that the system replies with a random response from a list of pre-defined responses.</li>
-</ul>
-<h2>Tech Support 1</h2>
-<ul>
-<li><p>Download and extract the solution to <a href="archives/tech_support_1.zip">Tech Support 1</a>.</p>
+<li><p>In Eclipse, create a new project called Network-V5.</p>
 </li>
-<li><p>Import it into Eclipse and familiarise yourself with the code.  The app:</p>
+<li><p>Copy the following classes into this new project:</p>
 <ul>
-<li>is a console based system.</li>
-<li>is a textual dialog system i.e. you enter text on the console and the system will provide a response.</li>
-<li>responds with the same String always:  “That sounds interesting.  Tell me more…”</li>
-</ul>
-</li>
-</ul>
-<h2>Tech Support 2</h2>
-<ul>
-<li><p>Create a new project in Eclipse and call it <strong>Tech Support 2</strong>.</p>
-</li>
-<li><p>Copy the java files from <strong>Tech Support 1</strong> into <strong>Tech Support 2</strong>.</p>
-</li>
-<li><p>Make the necessary changes to this project so that the system provides a random response from a list of pre-defined responses e.g.:</p>
-<ul>
-<li>&quot;That sounds interesting. Tell me more...&quot;</li>
-<li>&quot;I need a bit more information on that.&quot;</li>
-<li>&quot;Have you checked that you do not have a dll conflict?&quot;</li>
-<li>&quot;That is explained in the manual. Have you read the manual?“</li>
-<li>&quot; That&#39;s not a bug, it&#39;s a feature!&quot;</li>
-<li>&quot;Could you elaborate on that?“</li>
-<li>etc.</li>
+<li><a href="archives/v4/PhotoPost.java">PhotoPost</a></li>
+<li><a href="archives/v4/MessagePost.java">MessagePost</a></li>
+<li><a href="archives/v4/Post.java">Post</a></li>
+<li><a href="archives/v4/NewsFeed.java">NewsFeed</a></li>
+<li><a href="archives/v4/Driver.java">Driver</a></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>Use your lecture notes to support you in this task.</p>
+<li><p>Make the Post class abstract and add an abstract method called displayExcerpt() to it. The return type of this method should be a String. </p>
 </li>
-<li><p>Test your completed app to make sure it behaves as expected.</p>
+<li><p>In Post&#39;s subclasses, provide the concrete implementation for this method.  </p>
+</li>
+<li><p>Message Post code:</p>
 </li>
 </ul>
-
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="02">
-        <h1>Developing Tech Support 3 application</h1>
-<p>In this section, you will:</p>
+<pre><code>    public String displayExtract()
+    {
+        return &quot;Message extract &quot;+ message.substring(0,10) + &quot;....&quot;;
+    }</code></pre>
 <ul>
-<li><p>refactor the code from the previous step to have this functionality:</p>
+<li>PhotoPost code:</li>
+</ul>
+<pre><code>    public String displayExtract()
+    {
+        return &quot;Photo caption: &quot; + caption.substring(0,10) + &quot;....&quot;;
+    }</code></pre>
 <ul>
-<li>Based on the user input, the system provides a context-sensitive, generated response from a list of pre-defined responses.  If the system cannot find a suitable generated response, it returns a random one.</li>
-</ul>
+<li><p>Save your code.  </p>
+</li>
+<li><p>Note that this code does not &quot;do&quot; anything as we have not called the displayExtract method from anywhere.  This is just a very short lab to illustrate the abstract class and method concept.</p>
 </li>
 </ul>
-<h2>Tech Support 2</h2>
-<ul>
-<li>If you are not happy with your solution from the previous step, download and extract this version of <a href="archives/tech_support_2.zip">Tech Support 2</a>.  Then import it into Eclipse and familiarise yourself with the code.  </li>
-</ul>
-<h2>Tech Support 3</h2>
-<ul>
-<li><p>Create a new project in Eclipse and call it <strong>Tech Support 3</strong>.</p>
-</li>
-<li><p>Copy the java files from <strong>Tech Support 2</strong> into <strong>Tech Support 3</strong>.</p>
-</li>
-<li><p>Make the necessary changes to have this functionality:</p>
-<ul>
-<li>Based on the user input, the system provides a context-sensitive, generated response from a list of pre-defined responses.  If the system cannot find a suitable generated response, it returns a random one.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>Use your lecture notes to support you in this task.</p>
-</li>
-<li><p>Test your completed app to make sure it behaves as expected.</p>
-</li>
-</ul>
-
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="03">
-        <h1>Solutions</h1>
-<p>The solution to the Tech Support 1 project <a href="archives/tech_support_1.zip">is here</a>.</p>
-<p>The solution to the Tech Support 2 project <a href="archives/tech_support_2.zip">is here</a>.</p>
-<p>The solution to the Tech Support 3 project <a href="archives/tech_support_3.zip">is here</a>.</p>
+<p>Solution: <a href="archives/Network-V5.zip">Network-V5</a></p>
 
       </div>
      
