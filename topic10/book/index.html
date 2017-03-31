@@ -89,25 +89,25 @@ h3
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-      Grouping Objects
+      Interfaces
     </a>
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Lab-02a">
-      Lab-02a
+    <a class="item" data-tab="Lab-10">
+      Lab-10
     </a>
     
-    <a class="item" data-tab="Demo">
-      Demo
+    <a class="item" data-tab="01">
+      01
     </a>
     
-    <a class="item" data-tab="Exercises">
-      Exercises
+    <a class="item" data-tab="02">
+      02
     </a>
     
-    <a class="item" data-tab="Solution">
-      Solution
+    <a class="item" data-tab="03">
+      03
     </a>
     
     <a class="item" href="../../index.html">
@@ -126,7 +126,7 @@ h3
       
     
       
-        <a class="active item" href="../../topic02/book-1/index.html">
+        <a class="item" href="../../topic02/book-1/index.html">
           Lab-02a
         </a>
       
@@ -180,7 +180,7 @@ h3
       
     
       
-        <a class="item" href="../../topic10/book/index.html">
+        <a class="active item" href="../../topic10/book/index.html">
           Lab-10
         </a>
       
@@ -190,86 +190,130 @@ h3
     <div class="ui basic segment">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Lab-02a">
+      <div  class="ui tab segment lab" data-tab="Lab-10">
         <h1>Objectives</h1>
-<p>In this lab, you will become more familiar with primitive arrays, particularly using counter-controlled loops with them.</p>
-
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Demo">
-        <h1>Demo Exercise in Eclipse</h1>
-<p>This step introduces a way to write and check your exercises on Eclipse.</p>
-<p>For each exercise, you should write the code in its own method and give it a similiar method header to this:</p>
-<pre><code>    public static void exercise_demo()</code></pre>
-<p>Note the use of the static modifier in the method header.</p>
-<h2>Demo Exercise</h2>
-<p>Perform these steps:</p>
+<p>On completion of this lab you should be able to:</p>
 <ul>
-<li>In Eclipse, create a new Project called Lab02a.</li>
-<li><p>Create a class in this Project called PrimitiveArrays</p>
+<li><p>use Interfaces when defining collections.</p>
 </li>
-<li><p>Write a method to read in 6 integers into an integer array and then print out the values to the screen.</p>
+<li><p>write your own bespoke Interface and implement it.</p>
 </li>
 </ul>
-<h2>Solution to the Demo Exercise</h2>
-<pre><code>import java.util.*;
-
-public class PrimitiveArrays {
-
-    private static Scanner input = new Scanner (System.in);
-
-    public static void main(String[] args) 
-    {    
-        exercise_demo();
-    }
-
-    public static void exercise_demo()
-    {
-        int numbers[] = new int[6];
-
-        for (int i = 0; i &lt; numbers.length ; i++)
-        {
-            System.out.print(&quot;Enter value : &quot;);
-            numbers[i] = input.nextInt();
-        }
-
-        for (int i = 0; i &lt; numbers.length ; i++)
-        {
-            System.out.println(&quot;value &quot; + (i+1)  + &quot; is: &quot; + numbers[i]);
-        }
-    }
-}</code></pre>
 
       </div>
      
-      <div  class="ui tab segment lab" data-tab="Exercises">
-        <h1>Exercises</h1>
-<p>Using the same method naming system and use of static methods, attempt the following exercises.</p>
-<p>In each case:</p>
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Using Pre-defined Interfaces</h1>
+<p>In this practical, you will use the Collections Framework Interfaces in the Network app.</p>
+<h2>Creating Network-V6</h2>
 <ul>
-<li>Add a method to the PrimitiveArrays class as written in the previous step.</li>
-<li>declare the primitive array as needed locally in your method.</li>
-<li>use the global Scanner object to read in data from the user.</li>
-<li>call your writen method from the main class (and comment out calls to other methods).</li>
+<li><p>Create a new project called Network-V6 in Eclipse.</p>
+</li>
+<li><p>Copy the following classes into the project:</p>
+<ul>
+<li><p><a href="archives/Driver.java">Driver.java</a></p>
+</li>
+<li><p><a href="archives/MessagePost.java">MessagePost.java</a></p>
+</li>
+<li><p><a href="archives/NewsFeed.java">NewsFeed.java</a></p>
+</li>
+<li><p><a href="archives/PhotoPost.java">PhotoPost.java</a></p>
+</li>
+<li><p><a href="archives/Post.java">Post.java</a></p>
+</li>
 </ul>
-<h2>Exercise 1</h2>
-<p>Write a method to read in 6 integers into an integer array and then print the values out backwards.  Call this method exercise_1.</p>
-<h2>Exercise 2</h2>
-<p>Write a method to read in 10 values into an integer array. Then add one to each value in the array. Finally, print out the resultant values in the array. Call this method exercise_2.</p>
-<h2>Exercise 3</h2>
-<p>Write a method to read in 10 ‘wages’ into a ‘double’ array (i.e. an array where each element is a double, for instance 2.33). Finally print out these values. Call this method exercise_3.</p>
-<h2>Exercise 4</h2>
-<p>Write a method to Similar to above , i.e. read in 10 ‘wages’ into a ‘double’ array (i.e. an array where each element is a double, for instance 2.33). This time only print out any wages over 100. Call this exercise_4.</p>
-<h2>Exercise 5</h2>
-<p>Similar to above, i.e. Read in 10 ‘wages’ into a ‘double’ array (i.e. an array where each element is a double, for instance 2.33). Anyone who earns over 1000 will have a wage reduction of 10%. Make this reduction. Finally print out all the values. Call this method exercise_5.</p>
-<h2>Exercise 6</h2>
-<p>Write a method to read in 10 &#39;wages&#39; into a &#39;double&#39; array as above. Calculate and print the average of the inputted wages.  Call this method exercise_6.</p>
+</li>
+</ul>
+<h2>Using the List Interface</h2>
+<ul>
+<li><p>In this section, you may need to refer to your lecture slides for support (i.e. the fourth slide deck).</p>
+</li>
+<li><p>In Post.java:</p>
+<ul>
+<li><p>define the <strong>comments</strong> ArrayList to be a List.</p>
+</li>
+<li><p>create a getter and setter for the <strong>comments</strong> field.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>In NewsFeed.java:</p>
+<ul>
+<li>define the <strong>posts</strong> ArrayList to be a List.</li>
+</ul>
+</li>
+<li><p>Test your code to make sure your refactoring did not break anything.</p>
+</li>
+</ul>
 
       </div>
      
-      <div  class="ui tab segment lab" data-tab="Solution">
-        <h1>Solution</h1>
-<p>The solution to these exercises <a href="archives/PrimitiveArrays.java">is here</a>.</p>
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Implementing INewsFeed</h1>
+<p>In this practical, you will create the INewsFeed interface and implement it in NewsFeed. In this section, you may need to refer to your lecture slides for support (i.e. the fourth slide deck).</p>
+<h2>Creating the New Project</h2>
+<ul>
+<li>In Eclipse, right click on your Network-V6 project and paste it as Network-V7.  Note: the solution to V6 is in the next step if you need it.</li>
+</ul>
+<h2>Creating INewsFeed.java</h2>
+<ul>
+<li><p>Within the <strong>src</strong> folder, create a new Interface called <strong>INewsFeed.java</strong>.</p>
+</li>
+<li><p>Add the following methods into the Interface:</p>
+</li>
+</ul>
+<pre><code>    void addPost(Post post);
+    void deletePost(int index);
+    String show();</code></pre>
+<h2>Updating NewsFeed.java</h2>
+<ul>
+<li><p>Implement the INewsFeed interface in the NewsFeed class.</p>
+</li>
+<li><p>You will notice that implementations have already been provided for two of the abstract methods:</p>
+<ul>
+<li>void addPost(Post post);</li>
+<li>String show();</li>
+</ul>
+</li>
+<li><p>You need to provide an implementation for this method:</p>
+<ul>
+<li>void deletePost(int index);</li>
+</ul>
+</li>
+<li><p>The implementation should remove the object stored in the <strong>posts</strong> collection at the specified index.</p>
+</li>
+<li><p>In the implementation of the <strong>show</strong> method, add the index number of the post to the output string.</p>
+</li>
+</ul>
+<h2>Updating Driver.java</h2>
+<ul>
+<li><p>Add an option 4 to the menu.</p>
+</li>
+<li><p>When this option is selected, a new method called <strong>deletePost()</strong> should be called.  This method should:</p>
+<ul>
+<li><p>display all the stored posts</p>
+</li>
+<li><p>ask the user to enter the index number of the post they wish to delete</p>
+</li>
+<li><p>delete the post at the specified index</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Note: don&#39;t worry about robustness in this lab e.g. exception handling on the input, verifying that the index is valid, etc.  The purpose of this lab is just to introduce you to Interfaces in the simplest form possible.</p>
+</li>
+<li><p>Test the delete aspect of your code; is all working as expected?</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Solutions</h1>
+<p>The solution for Network-V6 can be found <a href="archives/Network-V6.zip">here </a>.</p>
+<p>The solution for Network-V7 can be found <a href="archives/Network-V7.zip">here </a>.</p>
 
       </div>
      
